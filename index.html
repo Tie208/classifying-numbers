@@ -25,7 +25,7 @@ function categorizer () {
 
 const input = prompt("Enter a Real Number.");
 var number_input = Number(input)
-console.log(number_input)
+var number_input = number_input.replace(",","")
 if(isNaN(number_input)) {
     alert("ERROR");
     return;
