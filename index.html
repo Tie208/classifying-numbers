@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" href="/assets/img/favicon.png">
+    <title>Classify Real Numbers</title>
+</head>
+<body align="center">
+    <br>
+    <h1>Classify Real Numbers</h1>
+<br>
+        <br>
+        <img src="/assets/img/flow-chart-real-nums.png">
+        <br>
+        <br>
+        <p><b>Test the Flow Chart In Javascript.</b></p>
+        <button class="button" onclick="categorizer()">Run</button>
+</body>
+
+<script>
+function categorizer () {
+
+const input = prompt("Enter a Real Number.");
+var number_input = Number(input)
+console.log(number_input)
+if(isNaN(number_input)) {
+    alert("ERROR");
+    return;
+}
+//has decimal 
+if(Number.isInteger(number_input)) {
+    // is it negitive
+    if(Math.sign(number_input) == -1 ) {
+        alert("Integer");
+    } 
+
+    if(Math.sign(number_input) == 0 ) {
+        alert("Whole Number");
+    } 
+
+    if(Math.sign(number_input) == 1 ) {
+        alert("Natural Number");
+    }
+        
+} else {
+    num = number_input
+decimalcheck= num % 1
+if (decimalcheck !== 0) {
+alert("Rational")
+} else {
+    alert("Irrational")
+}
+}
+
+//end of function
+}
+
+
+
+
+</script>
+</html>
